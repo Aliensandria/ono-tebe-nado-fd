@@ -14,7 +14,7 @@ html {
   max-height: 293px;
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
-  padding: 90px 49px 96px 50px;
+  padding: 87px 49px 96px 50px;
   align-items: center;
   font-size: 18px;
 }
@@ -85,10 +85,10 @@ html {
 }
 
 .cover__title {
-  padding: 173px 20px 50px 50px;
+  padding: 172px 20px 50px 50px;
   display: flex;
+  flex-direction: column;
   position: relative;
-  flex-direction: column;                    
   row-gap: 36px;
   font-weight: 700;
   font-size: 100px;
@@ -100,8 +100,8 @@ html {
 
 .cover__description {
   position: absolute;
-  bottom: 48px;
-  left: 50px;
+  bottom: 50px;
+  left: 48px;
   right: 45px;
   display: flex;
   align-items: center;
@@ -142,7 +142,6 @@ html {
   height: 51px;
   background: none;
   border: #FFFFFF 1px solid;
-  position: relative;
   z-index: 2;
 }
 
@@ -161,7 +160,7 @@ html {
 }
 
 .lots {
-  margin: 180px 24px 152px;
+  margin: 178px 24px 152px;
 }
 
 .lots__card-list {
@@ -202,7 +201,6 @@ html {
   flex-direction: column;
   background-size: cover;
   background-position: center;
-  color: white;
 }
 
 .card .overlay {
@@ -225,7 +223,6 @@ html {
 
 .card__title,
 .card__text {
-  position: relative;
   z-index: 2;
 }
 
@@ -266,7 +263,7 @@ article {
   margin-bottom: 180px;
 }
 
-.about__logo{
+.about__logo {
   display: flex;
   justify-content: center;
   width: 240px;
@@ -296,7 +293,7 @@ article {
   font-size: 40px;
   line-height: normal;
   text-transform: uppercase;
-  padding-top: 102px;
+  padding-top: 104px;
 }
 
 .about__paragraph {
@@ -304,7 +301,7 @@ article {
   flex-direction: column;
   font-size: 20px;
   line-height: 24px;
-  padding-top: 100px;
+  padding-top: 97px;
   gap: 24px;
 }
 
