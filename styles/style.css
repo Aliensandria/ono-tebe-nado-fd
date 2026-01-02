@@ -11,10 +11,9 @@ html {
       /* Header */
 
 .header {
-  max-height: 293px;
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
-  padding: 87px 49px 96px 50px;
+  margin: 88px 49px 92px 50px;
   align-items: center;
   font-size: 18px;
 }
@@ -22,13 +21,10 @@ html {
 .header__links-list {
   display: flex;
   gap: 33px;
-  line-height: 0.2;
 }
 
 .header__links-list-item {
   list-style: circle;
-  text-decoration: underline;
-  text-underline-offset: 3px;
 }
 
 .header__links-list-item_no-bullit {
@@ -38,6 +34,7 @@ html {
 .header__link {
   text-decoration: underline;
   text-underline-offset: 3px;
+  color: inherit;
 }
 
 .header__link_active {
@@ -62,25 +59,41 @@ html {
   line-height: 1.35;
   text-underline-offset: 3px;
   text-align: left;
-  max-height: 240px;
 }
 
       /* Cover */
 
 .cover {
-  position: relative;
   background-image: url(../images/cover.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 757px;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  position: relative;
+  min-height: 757px;
   color: white;
+  z-index: 1;
 }
 
-.cover .overlay {
+.overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+.cover__title,
+.cover__description,
+.card__title,
+.card__text,
+.bet-button {
+  position: relative; 
+}
+
+.cover,
+.card {
+  position: relative;
   z-index: 1;
 }
 
@@ -88,25 +101,19 @@ html {
   padding: 172px 20px 50px 50px;
   display: flex;
   flex-direction: column;
-  position: relative;
   row-gap: 36px;
   font-weight: 700;
   font-size: 100px;
   line-height: 100%;
   letter-spacing: 30px;
   text-transform: uppercase;
-  z-index: 2;
 }
 
 .cover__description {
-  position: absolute;
-  bottom: 50px;
-  left: 48px;
-  right: 45px;
+  padding: 0 45px 50px 48px;
   display: flex;
   align-items: center;
-  column-gap: 105px;
-  z-index: 2;
+  column-gap: 106px;
 }
 
 .aligned-text {
@@ -137,12 +144,10 @@ html {
   color: white;
   font-size: 22px;
   text-transform: uppercase;
-  position: relative;
   width: 256px;
   height: 51px;
   background: none;
   border: #FFFFFF 1px solid;
-  z-index: 2;
 }
 
       /* Lots */
@@ -160,7 +165,7 @@ html {
 }
 
 .lots {
-  margin: 178px 24px 152px;
+  margin: 178px 24px 154px;
 }
 
 .lots__card-list {
@@ -172,7 +177,7 @@ html {
 }
 
 .lots__heading {
-  margin-bottom: 28px;
+  margin-bottom: 29px;
   margin-left: 40px;
   font-weight: 700;
   font-size: 40px;
@@ -182,7 +187,7 @@ html {
 
 .lots__card-list-item {
   max-width: 334px;
-  max-height: 596px;
+  min-height: 596px;
 }
 
 .card-link {
@@ -203,21 +208,13 @@ html {
   background-position: center;
 }
 
-.card .overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 1;
-}
-
 .card__title {
   position: relative;
   font-size: 22px;
-  font-style: bold;
   line-height: 120%;
   margin-bottom: 15px;
   text-decoration: underline;
-  text-underline-offset: 1px;
+  text-underline-offset: 2px;
   text-transform: uppercase;
 }
 
@@ -229,7 +226,7 @@ html {
 .card__text {
   position: relative;
   font-size: 20px;
-  line-height: 1.;
+  line-height: 24px;
 }
 
 .lots__look-more-link {
@@ -237,19 +234,12 @@ html {
   padding-left: 40px;
   color: black;
   text-decoration: underline;
-  text-underline-offset: 3px;
+  text-underline-offset: 4px;
   text-transform: lowercase;
 }
 
 article {
-  position: relative;
-  height: 100%;
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  background-size: cover;
-  background-position: center;
 }
 
       /*About*/
@@ -292,7 +282,7 @@ article {
   font-size: 40px;
   line-height: normal;
   text-transform: uppercase;
-  padding-top: 104px;
+  padding-top: 101px;
 }
 
 .about__paragraph {
@@ -300,7 +290,7 @@ article {
   flex-direction: column;
   font-size: 20px;
   line-height: 24px;
-  padding-top: 97px;
+  padding-top: 100px;
   gap: 24px;
 }
 
@@ -314,9 +304,9 @@ article {
 .footer {
   display: flex;
   justify-content: space-between;
-  margin: 0 auto 85px ;
-  padding-right: 48px;
-  padding-left: 50px;
+  margin-bottom: 82px;
+  padding-right: 49px;
+  padding-left: 51px;
   font-size: 18px;
 }
 
@@ -325,7 +315,6 @@ article {
   line-height: 1.35;
   text-underline-offset: 5px;
   text-align: left;
-  max-height: 240px;
 }
 
 .footer__menu-list {
@@ -342,13 +331,11 @@ article {
   text-decoration: none;
 }
 
-
 .footer__social-list {
   display: flex;
   justify-self: end;
   align-items: start;
   gap: 20px 48px;
-  max-width: 240px;
   list-style: none;
 }
 
